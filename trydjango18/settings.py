@@ -33,8 +33,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 #Email Configuration file
 # EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_HOST_USER = "jacndira@gmail.com"
-# EMAIL_HOST_PASSWORD = "call4now"
+# EMAIL_HOST_USER = "glkkgkkg"
+# EMAIL_HOST_PASSWORD = "dmdkdkd"
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 '''
