@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col-md-4 col-sm-offset-1">
+			<h1>You are Now Logged in!</h1>
+			{% if queryset %}
+			<h1>Welcome Staff</h1>
+			<table class="table">
+			{% for instance in queryset %}
+				<tr><td>{{ forloop.counter }}</td><td>{{ instance }}</td><td> {{ instance.full_name }}</td><td> {{ instance.timestamp | timesince }}</td></tr>
+				<!-- {% if instance.full_name == "User" %}
+					<td>Equal</td>
+				{% endif %} -->
+			{% endfor %}
+			</table>
+			{% endif %}
+			<br/>
+			<hr/>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</div>

@@ -1,0 +1,20 @@
+body {
+	min-height: 1000px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	background-color: skyblue;
+}
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+.navbar-default .navbar-brand:hover{
+	color: #fff;
+}
+.text-align-center {
+	text-align: center;
+}
+.jumbotron {
+	background-color: #b8eafc ;
+}

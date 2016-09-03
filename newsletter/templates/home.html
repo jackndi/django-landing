@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Welcome | {{block.super}}{% endblock %}
+		{% block jumbotron %}
+{% if not request.user.is_authenticated %}
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+				<div class="col-sm-8">
+						<h1>Learn coding!</h1>
+						<p>Learn how to coding quickly. We dedicate to help you become productive quickly. </p>
+						<p><a class="btn btn-primary btn-lg" role="button">
+						Join Us >></a>
+						</p>
+				</div>
+				<div class="col-sm-4" style="background-color:black;height:250px;">
+				</div>
+				</div>
+			</div>
+		</div>
+{% endif %}
+	{% endblock %}
+
+
+
+{% block content %}
+{% if request.user.is_authenticated %}
+
+	{% include 'profile.html' %}
+{% else %}
+	<div class="row">
+		<div class="col-md-4 col-sm-offset-1">
+			<h1> {{ title }} </h1>
+			 
+			 <form method="POST" action="."> {% csrf_token %}
+			 {{ form | crispy }}
+
+			 <input class="btn btn-primary btn-large" type="submit" value="Sign Up" />
+			 </form>
+		</div>
+	</div>
+{% endif %}
+{% endblock %}
